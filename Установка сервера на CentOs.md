@@ -77,8 +77,11 @@ chcon -Rt httpd_sys_content_t /home/some_user/project_dir
 ## Устанавливаем mysql
 [Как установить mysql?](https://github.com/devenode/notes/blob/main/mysql.md)
 
-
-
+## Перезагрузка сервера
+Перезагружаем сервер сейчас
+```
+shutdown -r now
+```
 
 
 
