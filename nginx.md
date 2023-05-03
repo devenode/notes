@@ -169,3 +169,54 @@ server {
     }
 }
 ```
+
+## Обслуживание статических файлов через nginx
+
+Указываем root дерективу
+```
+server {
+    listen 80;
+    listen [::]:80;
+    server_name develo.ga;
+    root /home/nastromo/prod/public;
+
+    error_page 404 /404.html;
+        location = /40x.html {
+    }
+    
+    error_page 500 502 503 504 /50x.html;
+        location = /50x.html {
+    }
+}
+```
+
+Перезагружаем nginx
+```
+systemctl reload nginx
+```
+
+Смотрим права на каталог со статическими файлами
+```
+namei -om /home/nastromo/prod/public
+```
+
+Меняем группу, которая имеет право на доступ к каталогу public
+```
+chown nastromo:nginx /home/nastromo
+```
+
+Даем группе nginx разрешение на исполнение файлов
+```
+chmod g+x /home/nastromo
+```
+
+
+
+
+
+
+
+
+
+
+
