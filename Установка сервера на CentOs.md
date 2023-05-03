@@ -65,32 +65,7 @@ chcon -Rt httpd_sys_content_t /home/some_user/project_dir
 ```
 
 ## Устанавливаем nginx
-
-Устанавливаем epel
-```
-yum install -y epel-release
-```
-
-Устанавливаем nginx 
-```
-yum -y install nginx
-```
-
-Запускаем nginx
-```
-systemctl start nginx
-```
-
-Проверяем статус nginx
-
-```
-systemctl status nginx
-```
-
-Добавляем nginx в автозапуск CentOS
-```
-systemctl enable nginx
-```
+[Как установить ngnix?](https://github.com/devenode/notes/blob/main/nginx.md)
 
 Говорим nginx слушать наше nodejs приложение
 
@@ -98,6 +73,9 @@ systemctl enable nginx
 
 ## Подключаем SSL сертификат
 [Как получить SSL сертификат?](https://github.com/devenode/notes/blob/main/ssl.md)
+
+## Устанавливаем mysql
+[Как установить mysql?](https://github.com/devenode/notes/blob/main/mysql.md)
 
 
 
