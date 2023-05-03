@@ -21,10 +21,3 @@ node --version
 ```
 npm --version
 ```
-
-## Удаление nodejs на CentOS
-
-
-
-
-## Обновление nodejs на CentOS
