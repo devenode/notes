@@ -140,12 +140,26 @@ server {
 }
 ```
 
-Если нужно указать дополнительный хедер и получить его в коде приложения
+Если нужно указать дополнительный хедер и получить его в коде приложения (указывается в разделе server)
 ```
 proxy_set_header   X-Forwarded-For    $proxy_add_x_forwarded_for;
 proxy_set_header   host    $host;
 
-// В коде приложения получаем
+// В коде приложения получаем значения:
 const forwarded = req.header[`X-Forwarded-For`];
 const hostname = req.header.host;
+```
+
+## Получить ssl сертификат невыключая ngnix
+```
+server {
+    listen 80;
+    listen [::]:80;
+    server_name site.com www.site.com;
+
+    location ~ /.well-known {
+        root /home/nastromo/certs;
+        allow all;
+    }
+}
 ```
