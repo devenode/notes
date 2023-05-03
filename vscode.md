@@ -5,11 +5,10 @@
 One Dark Pro
 ```
 
-Исправить smoot text на экране
+Исправить smoot text на экране (После команды выполнить перезагрузку компьютера)
 ```
 defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO
 ```
-После команды выполнить перезагрузку компьютера
 
 Чтобы reactjs понимал HTML теги
 
