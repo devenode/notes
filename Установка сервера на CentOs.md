@@ -94,7 +94,7 @@ systemctl enable nginx
 
 Говорим nginx слушать наше nodejs приложение
 
-[Пример файла nginx](https://github.com/devenode/notes/blob/main/Nginx%20%D1%81%D0%B5%D1%80%D0%B2%D0%B5%D1%80.md)
+[Пример .conf файла nginx](https://github.com/devenode/notes/blob/main/Nginx%20%D1%81%D0%B5%D1%80%D0%B2%D0%B5%D1%80.md)
 
 ## Подключаем SSL сертификат
 [Как получить SSL сертификат?](https://github.com/devenode/notes/blob/main/SSL%20%D1%81%D0%B5%D1%80%D1%82%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%82.md)
