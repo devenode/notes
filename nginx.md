@@ -140,6 +140,7 @@ server {
 }
 ```
 
+## Указать дополнительный header
 Если нужно указать дополнительный хедер и получить его в коде приложения (указывается в разделе server)
 ```
 proxy_set_header   X-Forwarded-For    $proxy_add_x_forwarded_for;
