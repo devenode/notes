@@ -210,7 +210,14 @@ chown nastromo:nginx /home/nastromo
 chmod g+x /home/nastromo
 ```
 
-
+## Настройка под reactjs приложение
+```
+location / {
+    root /home/nastromo/project/build;
+    index index.html;
+    try_files $uri /index.html =404;
+}
+```
 
 
 
