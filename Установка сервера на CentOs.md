@@ -15,9 +15,9 @@ yum -y update
 yum -y install vim
 ```
 
-Устанавливаем node.js
+Устанавливаем nodejs
 
-[Как установить node.js на CentOs](https://github.com/devenode/notes/blob/main/nodejs.md)
+[Как установить nodejs?](https://github.com/devenode/notes/blob/main/nodejs.md)
 
 Создаем дополнительного пользователя
 ```
@@ -40,7 +40,7 @@ scp app.tar.gz nastromo@165.22.18.107:~/project_dir
 ```
 pm2 start --name app_name app.js
 ```
-[Как добавить pm2 в автозапуск](https://github.com/devenode/notes/blob/main/pm2.md)
+[Как добавить pm2 в автозапуск?](https://github.com/devenode/notes/blob/main/pm2.md)
 
 ## Настраиваем SE Linux разрешения для работы с nginx, nodejs и статическими файлами
 
