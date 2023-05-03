@@ -17,7 +17,7 @@ yum -y install vim
 
 Устанавливаем node.js
 
-[Как установить node.js на CentOs](https://github.com/devenode/notes/blob/main/nginx.md)
+[Как установить node.js на CentOs](https://github.com/devenode/notes/blob/main/nodejs.md)
 
 Создаем дополнительного пользователя
 ```
