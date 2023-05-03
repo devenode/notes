@@ -17,13 +17,13 @@ yum -y install vim
 
 Устанавливаем node.js
 
-[Как установить node.js на CentOs](https://github.com/devenode/notes/blob/main/%D0%A3%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0%20nodejs.md)
+[Как установить node.js на CentOs](https://github.com/devenode/notes/blob/main/nginx.md)
 
 Создаем дополнительного пользователя
 ```
 adduser nas 
 ```
-[Как подключиться по SSH?](https://github.com/devenode/notes/blob/main/%D0%9F%D0%BE%D0%B4%D0%BA%D0%BB%D1%8E%D1%87%D0%B0%D0%B5%D0%BC%D1%81%D1%8F%20%D0%BF%D0%BE%20SSH.md)
+[Как подключиться по SSH?](https://github.com/devenode/notes/blob/main/ssh.md)
 
 Архивируем файлы проекта в app.tar.gz архив
 ```
@@ -34,13 +34,13 @@ tar czf js.tar.gz prod/
 ```
 scp app.tar.gz nastromo@165.22.18.107:~/project_dir
 ```
-[Пример файла deploy.sh](https://github.com/devenode/notes/blob/main/%D0%9F%D1%80%D0%B8%D0%BC%D0%B5%D1%80%20%D1%84%D0%B0%D0%B9%D0%BB%D0%B0%20deploy.sh.md)
+[Пример файла deploy.sh](https://github.com/devenode/notes/blob/main/deploy.md)
 
 Заходим в каталог с проектом и сохраняем приложение в pm2
 ```
 pm2 start --name app_name app.js
 ```
-[Как добавить pm2 в автозапуск](https://github.com/devenode/notes/blob/main/PM2%20%D0%BC%D0%B5%D0%BD%D0%B5%D0%B4%D0%B6%D0%B5%D1%80.md)
+[Как добавить pm2 в автозапуск](https://github.com/devenode/notes/blob/main/pm2.md)
 
 ## Настраиваем SE Linux разрешения для работы с nginx, nodejs и статическими файлами
 
@@ -94,10 +94,10 @@ systemctl enable nginx
 
 Говорим nginx слушать наше nodejs приложение
 
-[Пример .conf файла nginx](https://github.com/devenode/notes/blob/main/Nginx%20%D1%81%D0%B5%D1%80%D0%B2%D0%B5%D1%80.md)
+[Пример .conf файла nginx](https://github.com/devenode/notes/blob/main/nginx.md)
 
 ## Подключаем SSL сертификат
-[Как получить SSL сертификат?](https://github.com/devenode/notes/blob/main/SSL%20%D1%81%D0%B5%D1%80%D1%82%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%82.md)
+[Как получить SSL сертификат?](https://github.com/devenode/notes/blob/main/ssl.md)
 
 
 
