@@ -17,9 +17,14 @@ systemctl start nginx
 ```
 
 Проверяем статус nginx
-
 ```
 systemctl status nginx
+```
+
+
+Тестируем все .conf файлы nginx
+```
+nginx -t
 ```
 
 Добавляем nginx в автозапуск CentOS
