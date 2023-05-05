@@ -116,7 +116,7 @@ SELECT User, Host FROM mysql.user;
 SHOW GRANTS FOR 'admin'@'%';
 ```
 
-Разрешить пользователю заходить в ДБ с любого хоста
+Разрешить пользователю заходить в БД с любого хоста
 ```
 UPDATE mysql.user SET Host='%' WHERE Host='localhost' AND User='username';
 FLUSH PRIVILEGES;
