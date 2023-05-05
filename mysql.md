@@ -39,7 +39,54 @@ mysql_secure_installation
 ```
 mysql -u root -p
 ```
+## Как сменить root пароль
 
+Остановить сервер mysql:
+```
+sudo /usr/local/mysql/support-files/mysql.server stop
+```
+
+Запустить сервер и сбросить авторизацию:
+```
+sudo /usr/local/mysql/support-files/mysql.server start --skip-grant-tables
+```
+
+Запустить mysql клиент
+```
+/usr/local/mysql/bin/mysql
+```
+
+Сбросить привелегии
+```
+FLUSH PRIVILEGES;
+```
+
+Назначить новый хост для юзера:
+```
+UPDATE mysql.user SET Host='%' WHERE Host='localhost' AND User='username';
+```
+
+Назначить новый пароль для юзера:
+```
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'MyNewPass';
+```
+
+Закрыть клиент:
+```
+exit
+```
+
+Остановить сервер:
+```
+sudo /usr/local/mysql/support-files/mysql.server stop
+```
+
+Запустить сервер:
+```
+sudo /usr/local/mysql/support-files/mysql.server start
+```
+
+Готово! Можно входить под новым юзером.
 
 
 
