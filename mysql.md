@@ -122,6 +122,10 @@ UPDATE mysql.user SET Host='%' WHERE Host='localhost' AND User='username';
 FLUSH PRIVILEGES;
 ```
 
+Добавить конкретные привилегии
+```
+GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, REFERENCES ON `db_name`.* TO `admin`@`%`;
+```
 
 
 
