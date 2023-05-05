@@ -94,14 +94,32 @@ sudo /usr/local/mysql/support-files/mysql.server start
 CREATE SCHEMA `new_DB`;
 ```
 
+Создать юзера
+```
+CREATE USER 'admin'@'localhost' IDENTIFIED WITH mysql_native_password BY 'my_password';
+FLUSH PRIVILEGES;
+```
+
 Предоставить все права пользователю
 ```
 GRANT ALL ON new_DB.* TO 'admin'@'localhost';
+FLUSH PRIVILEGES;
+```
+
+Посмотреть список доступных юзеров
+```
+SELECT User, Host FROM mysql.user;
 ```
 
 Посмотреть права у пользователя:
 ```
 SHOW GRANTS FOR 'admin'@'%';
+```
+
+Разрешить пользователю заходить в ДБ с любого хоста
+```
+UPDATE mysql.user SET Host='%' WHERE Host='localhost' AND User='username';
+FLUSH PRIVILEGES;
 ```
 
 
