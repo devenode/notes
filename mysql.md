@@ -88,7 +88,21 @@ sudo /usr/local/mysql/support-files/mysql.server start
 
 Готово! Можно входить под новым юзером.
 
+## Часто используемые команды
+Создать БД
+```
+CREATE SCHEMA `new_DB`;
+```
 
+Предоставить все права пользователю
+```
+GRANT ALL ON new_DB.* TO 'admin'@'localhost';
+```
+
+Посмотреть права у пользователя:
+```
+SHOW GRANTS FOR 'admin'@'%';
+```
 
 
 
