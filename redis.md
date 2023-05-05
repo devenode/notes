@@ -8,7 +8,7 @@ brew install redis
 brew services start redis
 ```
 
-Проверить пинг (Ответ должен быть PONG)
+Проверить пинг (ответ должен быть PONG)
 ```
 redis-cli ping
 ```
@@ -40,7 +40,7 @@ sudo systemctl start redis
 sudo systemctl enable redis
 ```
 
-Проверить пинг (Ответ должен быть PONG)
+Проверить пинг (ответ должен быть PONG)
 ```
 redis-cli ping
 ```
