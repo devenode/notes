@@ -6,7 +6,7 @@
 yum -y install certbot
 ```
 
-Получаем сертификат (в .conf фале должно быть указано weel-known директива)
+Получаем сертификат (в .conf файле должно быть указано well-known директива)
 ```
 certbot certonly --standalone -d example.com -d www.example.com
 ```
