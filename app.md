@@ -3,8 +3,12 @@
 import 'dotenv/config.js'
 import express from 'express'
 import next from 'next'
+import cors from 'cors'
+import cookieParser from 'cookie-parser'
 import db from './server/db.js'
 import logger from './server/utils/logger.js'
+import auth from './server/middleware/auth.js'
+import api from './server/api/api.js'
 
 
 const dev = process.env.NODE_ENV !== 'production'
@@ -13,8 +17,12 @@ const handle = server.getRequestHandler()
 const app = express()
 
 
+app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
+app.use(cookieParser())
+app.use(auth)
+app.use(api)
 app.get(`*`, (req, res) => handle(req, res));
 
 
@@ -33,7 +41,7 @@ app.get(`*`, (req, res) => handle(req, res));
         await server.prepare()
         const port = process.argv.slice(2)[0] || process.env.PORT
 
-        await startListen(app, port)
+        await startListen(port)
         await logger({ type: `info`, message: `Server listening ${port} port in ${process.env.NODE_ENV}` })
 
         
@@ -45,7 +53,7 @@ app.get(`*`, (req, res) => handle(req, res));
 })()
 
 
-const startListen = (app, port) => {
+const startListen = port => {
     return new Promise((res, rej) => {
         if (process.env.NODE_ENV !== `production`) {
             app.listen(port, err => {
