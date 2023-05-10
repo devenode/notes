@@ -102,7 +102,7 @@ FLUSH PRIVILEGES;
 
 Предоставить все права пользователю
 ```
-GRANT ALL ON new_DB.* TO 'admin'@'localhost';
+GRANT ALL ON new_DB.* TO 'admin'@'%';
 FLUSH PRIVILEGES;
 ```
 
