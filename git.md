@@ -2,5 +2,5 @@
 ```
 git rm .env --cached
 git rm .env.local --cached
-git commit -m "Stopped tracking .env
+git commit -m "Stopped tracking .env"
 ```
