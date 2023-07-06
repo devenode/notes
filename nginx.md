@@ -243,17 +243,6 @@ server {
 }
 ```
 
-## Указать дополнительный header
-Если нужно указать дополнительный хедер и получить его в коде приложения (указывается в разделе server)
-```
-proxy_set_header   X-Forwarded-For    $proxy_add_x_forwarded_for;
-proxy_set_header   host    $host;
-
-// В коде приложения получаем значения:
-const forwarded = req.header[`X-Forwarded-For`];
-const hostname = req.header.host;
-```
-
 ## Пример файла .conf для CloudFlare
 ```
 server {
@@ -298,6 +287,17 @@ server {
 }
 ```
 
+## Указать дополнительный header
+Если нужно указать дополнительный хедер и получить его в коде приложения (указывается в разделе server)
+```
+proxy_set_header   X-Forwarded-For    $proxy_add_x_forwarded_for;
+proxy_set_header   host    $host;
+
+// В коде приложения получаем значения:
+const forwarded = req.header[`X-Forwarded-For`];
+const hostname = req.header.host;
+```
+
 ## Получить ssl сертификат невыключая ngnix
 ```
 server {
@@ -319,17 +319,17 @@ server {
 server {
     listen 80;
     listen [::]:80;
-    server_name develo.ga;
-    root /home/nastromo/prod/public;
+    server_name example.com;
 
-    error_page 404 /404.html;
-        location = /40x.html {
-    }
-    
-    error_page 500 502 503 504 /50x.html;
-        location = /50x.html {
+    location /images/ {
+        root /home/nastromo/storage;
     }
 }
+```
+
+Разрешаем читать файлы с веба
+```
+chcon -Rt httpd_sys_content_t /home/nastromo/storage
 ```
 
 Перезагружаем nginx
