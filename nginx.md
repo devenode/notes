@@ -254,6 +254,50 @@ const forwarded = req.header[`X-Forwarded-For`];
 const hostname = req.header.host;
 ```
 
+## Пример файла .conf для CloudFlare
+```
+server {
+    listen 80;
+    listen [::]:80;
+    server_name www.example.com;
+
+    # redirect all HTTP requests to main host with a 301 Moved Permanently response.
+    return 301 https://example.com$request_uri;
+}
+
+server {
+    listen 80;
+    listen [::]:80;
+    server_name example.com;
+
+    location ~ /.well-known {
+        root /home/nastromo/certs;
+        allow all;
+    }
+
+    location / {
+        root /home/nastromo/example.com/front/build;
+        index index.html;
+        try_files $uri /index.html =404;
+    }
+}
+
+server {
+    listen 80;
+    listen [::]:80;
+    server_name api.example.com;
+
+    location ~ /.well-known {
+        root /home/example/certs;
+        allow all;
+    }
+
+    location / {
+        proxy_pass http://127.0.0.1:4000;
+    }
+}
+```
+
 ## Получить ssl сертификат невыключая ngnix
 ```
 server {
