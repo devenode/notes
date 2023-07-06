@@ -162,7 +162,7 @@ server {
     server_name www.example.com;
 
     # redirect all HTTP requests to HTTPS with a 301 Moved Permanently response.
-    return 301 https://17otbr.com$request_uri;
+    return 301 https://example.com$request_uri;
 
     # certs sent to the client in SERVER HELLO are concatenated in ssl_certificate
     ssl_certificate /etc/letsencrypt/live/example.com/fullchain.pem;
