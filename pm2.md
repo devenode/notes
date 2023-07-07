@@ -19,3 +19,8 @@ pm2 save
 ```
 pm2 start --name splitzz_2 app.js -- 3330
 ```
+
+Показать console.log в коде в реальном времени
+```
+pm2 log
+```
