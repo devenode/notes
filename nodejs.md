@@ -1,23 +1,16 @@
 # Команды nodejs
 
 ## Установка nodejs на CentOS
-
-Если нужно установить версию 18, просто поменять setup_10.x на setup_18.x
 ```
-curl -sL https://rpm.nodesource.com/setup_10.x | sudo bash -
-```
-
-Устанавливаем сам nodejs
-```
-sudo yum install -y nodejs
+dnf module install nodejs:18/common
 ```
 
 Проверяем версию nodejs
 ```
-node --version
+node -v
 ```
 
 Проверяем версию npm
 ```
-npm --version
+npm -v
 ```
