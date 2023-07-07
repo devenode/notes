@@ -20,6 +20,7 @@ yum -y install vim
 [Как установить nodejs?](https://github.com/devenode/notes/blob/main/nodejs.md)
 
 Устанавливаем pm2
+
 [Как установить pm2?](https://github.com/devenode/notes/blob/main/pm2.md)
 
 Создаем дополнительного пользователя
