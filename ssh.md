@@ -72,7 +72,10 @@ chmod 400 ~/.ssh/id_rsa
 ```
 Готово! Можно заходить на сервер
 
-
+Чтбы скопировать фалы с сервера на локальную машину
+```
+scp nastromo@111.111.111.111:/home/nastromo/media.tar.gz /Users/nastromo/Downloads/
+```
 
 
 
