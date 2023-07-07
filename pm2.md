@@ -4,11 +4,6 @@
 npm install pm2@latest -g
 ```
 
-Запустить процесс с названием
-```
-pm2 start app.js --name myapp
-```
-
 Говорим pm2 добавить себя в автозапуск
 ```
 pm2 startup
@@ -17,6 +12,11 @@ pm2 startup
 Говорим pm2 удалить себя из автозапуска
 ```
 pm2 unstartup systemd
+```
+
+Запустить процесс с названием
+```
+pm2 start app.js --name myapp
 ```
 
 Проверяем что запущено
