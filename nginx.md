@@ -294,8 +294,8 @@ proxy_set_header   X-Forwarded-For    $proxy_add_x_forwarded_for;
 proxy_set_header   host    $host;
 
 // В коде приложения получаем значения:
-const forwarded = req.header[`X-Forwarded-For`];
-const hostname = req.header.host;
+const forwarded = req.headers[`X-Forwarded-For`];
+const hostname = req.headers.host;
 ```
 
 ## Получить ssl сертификат невыключая ngnix
