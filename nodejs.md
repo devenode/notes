@@ -4,7 +4,7 @@
 Лучший способ для управления node.js это nvm.
 Загружаем скрипт, который установит nvm
 ```
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.35.3/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
 ```
 
 Смотрим лист установленых версия node.js
@@ -20,6 +20,11 @@ nvm ls-remote
 Выбираем версию и устанавливаем
 ```
 nvm install 14.4.1
+```
+
+Или устанавливаем последнюю
+```
+nvm install node
 ```
 
 Указываем какую версию использовать
