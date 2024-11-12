@@ -35,8 +35,8 @@ systemctl enable nginx
 ## Пример файл .conf с лоадбалансером
 ```
 upstream infokurs {
-    server 127.0.0.1:3000 fail_timeout=0;
-    server 127.0.0.1:3030 fail_timeout=0;
+    server 127.0.0.1:3000 fail_timeout=10s;
+    server 127.0.0.1:3030 fail_timeout=10s;
 }
 
 server {
