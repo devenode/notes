@@ -1,9 +1,13 @@
-Install Netcat on CentOS
+## Install Netcat on CentOS
 Використовується для перевірки використання портів під час zero-downtime deployment!
 
 Update the package list (optional but recommended):
 
-```sudo yum update -y```
+```
+sudo yum update -y
+```
 
 Install Netcat:
-```sudo yum install nc -y```
+```
+sudo yum install nc -y
+```
